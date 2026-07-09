@@ -1,6 +1,6 @@
 # Void
 
-> A modern project built with simplicity, performance, and scalability in mind.
+> A modern project built with Omarchy in mind.
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/r8tten/Void)
 ![GitHub repo size](https://img.shields.io/github/repo-size/r8tten/Void)
@@ -18,9 +18,8 @@ Whether you're contributing, experimenting, or using it in production, the goal 
 
 
 
-```
-(https://github.com/r8tten/Void/blob/main/Screenshots/screenshot-2026-07-09_18-02-28.png)
-```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/aeee300d-54c0-4ce1-8af3-e177aa4b6d6f" />
+
 
 ---
 
