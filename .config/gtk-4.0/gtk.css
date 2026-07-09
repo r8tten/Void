@@ -1,0 +1,95 @@
+/* ============================================================
+   Nautilus GTK4 Theme — Catppuccin Mocha (pure recolor)
+   Location: ~/.config/gtk-4.0/gtk.css
+
+   This does NOT restyle any widget. It only redefines the
+   libadwaita named color variables that Nautilus already uses
+   internally, so the stock layout, borders, radii, spacing,
+   and hover/selection behavior stay exactly as-is — just the
+   palette changes.
+   ============================================================ */
+
+/* Catppuccin Mocha palette */
+@define-color mocha_base     #1e1e2e;
+@define-color mocha_mantle   #181825;
+@define-color mocha_crust    #11111b;
+@define-color mocha_surface0 #313244;
+@define-color mocha_surface1 #45475a;
+@define-color mocha_surface2 #585b70;
+@define-color mocha_overlay0 #6c7086;
+@define-color mocha_overlay1 #7f849c;
+@define-color mocha_subtext0 #a6adc8;
+@define-color mocha_subtext1 #bac2de;
+@define-color mocha_text     #cdd6f4;
+@define-color mocha_mauve    #cba6f7;
+@define-color mocha_lavender #b4befe;
+@define-color mocha_blue     #89b4fa;
+
+/* ------------------------------------------------------------
+   Core surfaces (window, content view, headerbar)
+   Nautilus keeps headerbar + content view the same tone, with
+   the sidebar one shade darker — matching stock behavior.
+   ------------------------------------------------------------ */
+@define-color window_bg_color      @mocha_base;
+@define-color window_fg_color      @mocha_text;
+
+@define-color view_bg_color        @mocha_base;
+@define-color view_fg_color        @mocha_text;
+
+@define-color headerbar_bg_color        @mocha_base;
+@define-color headerbar_fg_color        @mocha_text;
+@define-color headerbar_border_color    @mocha_base;
+@define-color headerbar_backdrop_color  @mocha_base;
+@define-color headerbar_shade_color     transparent;
+
+/* ------------------------------------------------------------
+   Sidebar
+   ------------------------------------------------------------ */
+@define-color sidebar_bg_color        @mocha_mantle;
+@define-color sidebar_fg_color        @mocha_subtext1;
+@define-color sidebar_backdrop_color  @mocha_mantle;
+@define-color sidebar_border_color    @mocha_mantle;
+@define-color sidebar_shade_color     transparent;
+
+@define-color secondary_sidebar_bg_color @mocha_mantle;
+@define-color secondary_sidebar_fg_color @mocha_subtext1;
+
+/* ------------------------------------------------------------
+   Sidebar font weight (bold labels only, no other UI change)
+   ------------------------------------------------------------ */
+placessidebar row label {
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------------
+   Cards, popovers, dialogs (right-click menus, properties, etc.)
+   ------------------------------------------------------------ */
+@define-color card_bg_color     @mocha_surface0;
+@define-color card_fg_color     @mocha_text;
+@define-color card_shade_color  @mocha_crust;
+
+@define-color dialog_bg_color   @mocha_base;
+@define-color dialog_fg_color   @mocha_text;
+
+@define-color popover_bg_color    @mocha_mantle;
+@define-color popover_fg_color    @mocha_text;
+@define-color popover_shade_color @mocha_crust;
+
+/* ------------------------------------------------------------
+   Accent (selections, focus rings, checked/active states)
+   ------------------------------------------------------------ */
+@define-color accent_color     @mocha_mauve;
+@define-color accent_bg_color  @mocha_mauve;
+@define-color accent_fg_color  @mocha_crust;
+
+/* ------------------------------------------------------------
+   Shade / scroll / misc structural tokens
+   ------------------------------------------------------------ */
+@define-color shade_color            alpha(black, 0.25);
+@define-color scrollbar_outline_color @mocha_mantle;
+
+/* ------------------------------------------------------------
+   Text field colors (search bar, rename entries)
+   ------------------------------------------------------------ */
+@define-color text_view_bg_color @mocha_surface0;
+@define-color text_view_fg_color @mocha_text;
