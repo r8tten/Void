@@ -14,28 +14,12 @@ Void is a project designed to provide a clean, efficient, and maintainable solut
 
 Whether you're contributing, experimenting, or using it in production, the goal is to keep the codebase simple, readable, and easy to extend.
 
----
+## 📸 Screenshots
 
-## ✨ Features
 
-- 🚀 Fast and lightweight
-- 📦 Clean project structure
-- 🔧 Easy to configure
-- 🛠️ Open source
-- 📈 Designed for future expansion
 
----
-
-## 📂 Project Structure
-
-```text
-Void/
-├── src/
-├── assets/
-├── docs/
-├── tests/
-├── README.md
-└── ...
+```
+(https://github.com/r8tten/Void/blob/main/Screenshots/screenshot-2026-07-09_18-02-28.png)
 ```
 
 ---
@@ -53,75 +37,6 @@ Move into the project directory:
 ```bash
 cd Void
 ```
-
-Install dependencies (if applicable):
-
-```bash
-# npm
-npm install
-
-# or
-pip install -r requirements.txt
-
-# or
-cargo build
-
-# Adjust depending on your project
-```
-
----
-
-## 🚀 Usage
-
-Run the project:
-
-```bash
-# Example
-
-npm start
-
-# or
-
-python main.py
-
-# or
-
-cargo run
-```
-
----
-
-## 🛠️ Technologies
-
-List the technologies used here, for example:
-
-- Python
-- JavaScript
-- TypeScript
-- Rust
-- C#
-- Docker
-
----
-
-## 📸 Screenshots
-
-Add screenshots or GIFs here.
-
-```
-docs/images/example.png
-```
-
----
-
-## 📋 Roadmap
-
-- [ ] Improve documentation
-- [ ] Add additional features
-- [ ] Increase test coverage
-- [ ] Performance optimizations
-
----
 
 ## 🤝 Contributing
 
