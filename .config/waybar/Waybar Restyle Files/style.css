@@ -1,0 +1,157 @@
+@import "../omarchy/current/theme/waybar.css";
+
+/* LeyzS-inspired styling adapted to Omarchy module names */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+    font-weight: bold;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* ===== Workspace section ===== */
+
+#workspaces button {
+    background: rgba(179, 136, 235, 0.1);
+    background-color: @background;
+    color: @foreground;
+    border-radius: 50%;
+    margin: 5px 4px;
+    padding: 0;
+    min-width: 23px;
+    min-height: 23px;
+    font-size: 12px;
+    font-weight: 100;
+    border: 2px solid rgba(80, 85, 108, 0.8);
+    box-shadow: none;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button.active {
+    background: linear-gradient(
+        45deg,
+        rgba(179, 136, 235, 1),
+        rgba(130, 238, 255, 1)
+    );
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: none;
+    outline: none;
+    background-clip: border-box;
+    -gtk-outline-radius: 50%;
+}
+
+#workspaces button:hover {
+    background-color: @foreground;
+    color: rgb(0, 0, 0);
+    border: 2px solid @foreground;
+}
+
+/* ===== Main module pill styling ===== */
+
+#custom-weather,
+#custom-clock,
+#pulseaudio,
+#pulseaudio.output,
+#idle_inhibitor,
+#tray,
+#network,
+#cpu,
+#memory,
+#bluetooth,
+#custom-notification-silencing-indicator,
+#mpris {
+    background-color: @background;
+    color: @foreground;
+    border-radius: 15px;
+    padding: 0px 6px;
+    margin: 5px 2px;
+    border: 2px solid rgba(80, 85, 108, 0.8);
+    transition: all 0.3s ease;
+}
+
+/* Media block spacing */
+#mpris {
+    padding: 0px 12px;
+}
+
+#idle_inhibitor {
+    padding-right: 13px;
+    padding-left: 10px;
+}
+
+#network {
+    padding-right: 13px;
+    padding-left: 10px;
+}
+
+/* Separator */
+#custom-separator {
+    color: rgba(80, 85, 108, 0.8);
+    font-size: 22px;
+    padding: 0;
+    margin: 0px -2px;
+    background: transparent;
+}
+
+/* Power / Omarchy menu button */
+#custom-omarchy {
+    background-color: @background;
+    color: @color9;
+    border: 2px solid rgba(80, 85, 108, 0.8);
+    border-radius: 50%;
+    min-width: 25px;
+    min-height: 25px;
+    font-size: 13px;
+    margin: 4px 10px 5px 5px;
+    padding-right: 2px;
+    transition: all 0.3s ease;
+}
+
+#custom-omarchy:hover {
+    background-color: @color9;
+    color: rgb(203, 166, 247);
+    border: 2px solid rgba(80, 85, 108, 0.8);
+}
+
+/* ===== Hover behavior ===== */
+
+#custom-clock:hover,
+#custom-weather:hover,
+#pulseaudio:hover,
+#pulseaudio.output:hover,
+#tray:hover,
+#memory:hover,
+#network:hover,
+#cpu:hover,
+#idle_inhibitor:hover,
+#bluetooth:hover,
+#custom-notification-silencing-indicator:hover,
+#mpris:hover {
+    background-color: @color9;
+    color: rgb(203, 166, 247);
+}
+
+/* Optional state tweaks */
+
+/*
+#custom-notification-silencing-indicator.active {
+    color: #ffb86c;
+}
+
+#memory.warning,
+#cpu.warning {
+    color: #ffb86c;
+}
+
+#memory.critical,
+#cpu.critical {
+    color: #ff5555;
+}
+*/

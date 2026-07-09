@@ -1,0 +1,356 @@
+/**
+ * @name Jugom's Theme
+ * @author ClearVision Team ft. Jugom
+ * @version 7.0.1
+ * @description Highly customizable theme for BetterDiscord.
+ * @source https://github.com/ClearVision/ClearVision-v7
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+/* IMPORT CSS */
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
+@import url("https://clearvision.github.io/ClearVision-v7/betterdiscord.css");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@540&display=swap');
+
+/* SETTINGS */
+:root {
+  /* ACCENT COLORS */
+  --main-color: #ff7100; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
+  --secondary-color: #1ae400; /* secondary accent color (hex, rgb or hsl) */
+  --panels-background: rgba(0, 0, 0, 0.5); /* panels background color (hex, rgb or hsl) [default: rgba(0, 0, 0, 0.5)] */
+  --hover-color: #1e63b3; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+  --success-color: #43b581; /* positive accent color (hex, rgb or hsl) [default: #43b581] */
+  --danger-color: #982929; /* danger accent color (hex, rgb or hsl) [default: #982929] */
+  /* STATUS COLORS */
+  --online-color: #43b581; /* online status color (hex, rgb or hsl) [default: #43b581] */
+  --idle-color: #faa61a; /* idle status color (hex, rgb or hsl) [default: #faa61a] */
+  --dnd-color: #982929; /* dnd status color (hex, rgb or hsl) [default: #982929] */
+  --streaming-color: #593695; /* streaming status color (hex, rgb or hsl) [default: #593695] */
+  --offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
+  /* APP BACKGROUND */
+  --background-shading-percent: 0%; /* app background shading amount (0 for complete smoothness) [default: 100%] */
+  --background-image: none; /* app background image (link must be HTTPS) [default: url(https://clearvision.github.io/images/sapphire.jpg)]*/
+  --background-position: center; /* app background position [default: center] */
+  --background-size: cover; /* app background size (px) [default: cover] */
+  --background-attachment: fixed; /* app background attachment [default: fixed] */
+  --background-filter: none; /* app background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: saturate(calc(var(--saturation-factor, 1) * 1))] */
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: var(--background-image); /* user popout background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
+  --user-popout-position: var(--background-position); /* user popout position [default: var(--background-position)] */
+  --user-popout-size: var(--background-size); /* user popout size (px) [default: var(--background-size)] */
+  --user-popout-attachment: var(--background-attachment); /* user popout background attachment [default: var(--background-attachment)] */
+  --user-popout-filter: var(--background-filter); /* user popout background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: var(--background-image); /* user modal background image (link must be HTTPS) (not applied to nitro users) [default: var(--background-image)] */
+  --user-modal-position: var(--background-position); /* user modal position [default: var(--background-position)] */
+  --user-modal-size: var(--background-size); /* user modal size (px) [default: var(--background-size)] */
+  --user-modal-attachment: var(--background-attachment); /* user modal background attachment [default: var(--background-attachment)] */
+  --user-modal-filter: var(--background-filter); /* user modal background adjustments (ex: blur, saturation, brightness) (more info: https://developer.mozilla.org/en-US/docs/Web/CSS/filter) [default: var(--background-filter);] */
+  /* HOME ICON */
+  --home-icon: url(https://clearvision.github.io/icons/discord.svg); /* home button icon (link must be HTTPS) [default: url(https://clearvision.github.io/icons/discord.svg)]*/
+  --home-size: cover; /* home button icon size (px) [default:cover] */
+  /* FONTS */
+  --main-font: Quicksand, Arial; /* main font for app (font must be installed) [default: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif] */
+  --code-font: "JetBrains Mono", Consolas; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+  /* CHANNEL COLORS */
+  --channel-normal: var(--interactive-normal); /* channel text color [default: var(--interactive-normal)] */
+  --channel-muted: var(--interactive-muted); /* muted channel text color [default: var(--interactive-muted)] */
+  --channel-hover: var(--interactive-hover); /* hovered channel text color [default: var(--interactive-hover)] */
+  --channel-selected: var(--interactive-active); /* selected channel text color [default: var(--interactive-active)] */
+  --channel-selected-bg: var(--main-color); /* selected channel background [default: var(--main-color)] */
+  --channel-unread: var(--secondary-color); /* unread channel text color [default: var(--main-color)] */
+  --channel-unread-hover: var(--hover-color); /* unread channel hover color [default: var(--hover-color)] */
+  /* ACCESSIBILITY */
+  --focus-color: var(--main-color); /* outline when pressing TAB key [default: var(--main-color)] */
+}
+
+/* THEME SPECIFIC SHADING */
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(252, 252, 252, 0.0); /* app background shading color [default: rgba(252, 252, 252, 0.3)] */
+  --card-shading: rgba(252, 252, 252, 0.3); /* cards background shading color [default: rgba(252, 252, 252, 0.3)] */
+  --popout-shading: rgba(252, 252, 252, 0.7); /* popouts background shading color [default: rgba(252, 252, 252, 0.7)] */
+  --modal-shading: rgba(252, 252, 252, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(0, 0, 0, 0.3); /* inputs background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --normal-text: #36363c; /* text color [default: #36363c] */
+  --muted-text: #75757e; /* muted text color [default: #75757e] */
+}
+
+/* ASH THEME */
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.0); /* app background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --card-shading: rgba(0, 0, 0, 0.2); /* cards background shading color [default: rgba(0, 0, 0, 0.2)] */
+  --popout-shading: rgba(0, 0, 0, 0.6); /* popouts background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --modal-shading: rgba(0, 0, 0, 0.4); /* modals background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: #d8d8db; /* text color [default: #d8d8db] */
+  --muted-text: #aeaeb4; /* muted text color [default: #aeaeb4] */
+}
+
+/* DARK THEME */
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.0); /* app background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --card-shading: rgba(0, 0, 0, 0.3); /* cards background shading color [default: rgba(0, 0, 0, 0.3)] */
+  --popout-shading: rgba(0, 0, 0, 0.7); /* popouts background shading color [default: rgba(0, 0, 0, 0.7)] */
+  --modal-shading: rgba(0, 0, 0, 0.5); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: #fbfbfb; /* text color [default: #fbfbfb] */
+  --muted-text: #94949c; /* muted text color [default: #94949c] */
+}
+
+/* ONYX THEME */
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0); /* app background shading color [default: rgba(0, 0, 0, 0.8)] */
+  --card-shading: rgba(0, 0, 0, 0.4); /* cards background shading color [default: rgba(0, 0, 0, 0.4)] */
+  --popout-shading: rgba(0, 0, 0, 0.8); /* popouts background shading color [default: rgba(0, 0, 0, 0.8)] */
+  --modal-shading: rgba(0, 0, 0, 0.6); /* modals background shading color [default: rgba(0, 0, 0, 0.6)] */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color [default: rgba(255, 255, 255, 0.05)] */
+  --normal-text: #dcdcde; /* text color [default: #dcdcde] */
+  --muted-text: #86868e; /* muted text color [default: #86868e] */
+}
+
+/* ADD ADDITIONAL CSS BELOW HERE */
+
+/* ---------- MORE CUSTOMIZATIONS ---------- */
+/* Selected channel */
+.wrapper__2ea32.modeSelected__2ea32 .link__2ea32::before {
+    background: linear-gradient(to right, var(--hsl-main-color), transparent);
+}
+
+/* Mentioned Highlight */
+.mentioned__5126c {
+  --background-mentioned: linear-gradient(to bottom, #1ae40025, transparent);
+}
+/* Mentioned Pill */
+.mentioned__5126c::before {
+  background: var(--secondary-color);
+}
+
+/* ---------- TILING ---------- */
+/* Outside Margin */
+/*.visual-refresh .base_c48ade {*/
+.visual-refresh .layers__960e4 {
+margin: 20px;
+}
+/* Title */
+.visual-refresh .bar_c38106 {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  background-color: var(--panels-background);
+}
+
+/* Servers / Sidebar / User Area */
+.visual-refresh .sidebar_c48ade {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/* Servers */
+.visual-refresh .itemsContainer_ef3116 {
+  height: 98.6%;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  margin-top: -10px;
+  background-color: var(--panels-background);
+}
+/* Server Folder Color */
+.folderIcon__48112 {
+  color: var(--main-color);
+}
+/* Server folder border */
+.isExpanded__48112 .folderGroupBackground__48112 {
+  border: 1px solid;
+  border-color: #aaaaaa50;
+}
+/* Selected Server */
+.item__58105 {
+  background-color: var(--main-color);
+}
+
+/* Chat Sidebar */
+.visual-refresh .container__2637a {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: var(--panels-background);
+}
+
+/* DM Sidebar */
+.visual-refresh .privateChannels__35e86 {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: var(--panels-background);
+}
+
+/* Settings Sidebar */
+.visual-refresh .sidebarRegion__23e6b {  
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-right: 20px;
+  max-height: 960px;
+  overflow: auto;
+  scrollbar-width: none;
+  background-color: var(--panels-background);
+}
+
+/* User Area */
+.visual-refresh .panels_c48ade {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  background-color: var(--panels-background);
+}
+
+/* Subtitle */
+.visual-refresh .themed__9293f {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: var(--panels-background);
+}
+
+/* Chat*/
+.visual-refresh .chatContent_f75fb0 {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: var(--panels-background);
+}
+.visual-refresh .newMessagesBar__0f481 {
+  margin-top: -1px;
+  border-radius: 15px;
+  background: linear-gradient(to left, var(--hsl-main-color), var(--channel-unread));
+}
+
+/* Chat Input */
+.visual-refresh .channelTextArea__74017 {
+  background-color: transparent;
+}
+
+/* Forum */
+.visual-refresh .container_f369db {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: var(--panels-background);
+}
+
+/* Forum chat Bar */
+.visual-refresh .header__34c2c {
+  background: linear-gradient(to top, #aaaaaa50, transparent);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* People Column */
+.visual-refresh .peopleColumn__133bf {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: var(--panels-background);
+}
+
+/* Settings Main */
+.visual-refresh .contentRegion__23e6b {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  margin-top: 40px;
+  max-height: 960px;
+  overflow: auto;
+  scrollbar-width: none;
+  background-color: var(--panels-background);
+}
+
+/* Members */
+.visual-refresh .membersWrap_c8ffbb {
+  height: 99.8%;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  margin-left: 20px;
+  background-color: var(--panels-background);
+}
+
+/* Active Now */
+.visual-refresh .header__7d20c {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding-left: 15px;
+  margin-top: -6px;
+  background-color: #ff710025;
+}
+/* Active Now Cards */
+.visual-refresh .wrapper__00943 {
+  border: 1px solid var(--main-color);
+  background-color: var(--panels-background);
+}
+
+/* Images Preview */
+.visual-refresh .topBar__6088c {
+  margin-bottom: -20px;
+}
+
+/* Old User Panel */
+.visual-refresh .panels_c48ade {
+    width: calc(100% - 2 * var(--global-margin) - 1px * var(--guildsize) - 2 * calc(10px * var(--guildsize) / 50)) !important;
+    left: calc(var(--global-margin) + 1px * var(--guildsize) + 2 * calc(10px * var(--guildsize) / 50)) !important;
+}
+
+/* Span server list to the bottom */
+nav.guilds_c48ade,
+.visual-refresh .scroller_ef3116 {
+    margin-bottom: 0 !important;
+}
+
+/* Nameplate fix */
+.panels_c48ade .container__4bbc6 {
+    width: 104.1%;
+    border-top-right-radius: 8px;
+}
+
+/* Channel text */
+.theme-dark .name__2ea32 {
+    color: rgb(218, 218, 218);
+    text-shadow: #000000 0px 0px 1px;
+}
+
+/* Server list */
+.visual-refresh .scroller_ef3116 {
+    background: var(--card-shading);
+}
+
+/* Round servers icon */
+.icon__6e9f8 {
+    border-radius: 50%;
+}
+
+/* Server hover + selected */
+.wrapper__6e9f8.selected__6e9f8 .icon__6e9f8 {
+    border-radius: 10px;
+    transition: border-radius 0.5s ease;
+}
+
+/* Channels list + Server name above it*/
+.visual-refresh .container__2637a {
+    background: var(--card-shading);
+}
+
+/* Hide pill for home */
+.tutorialContainer__1f388 .listItem__650eb .item__58105 {
+    display: none;
+}
+
+/* Selected channel */
+.wrapper__2ea32.modeSelected__2ea32 .link__2ea32::before {
+    background: linear-gradient(to right, var(--hsl-main-color), transparent);
+}
+
+/* New badge in forum*/
+.newBadge_faa96b {
+    color: var(--text-normal);
+}

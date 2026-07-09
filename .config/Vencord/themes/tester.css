@@ -1,0 +1,117 @@
+/**
+ * @name ClearVision tester
+ * @author ClearVision Team
+ * @version 7.0.0 pre
+ * @description Highly customizable theme for BetterDiscord.
+ * @source https://github.com/ClearVision/ClearVision-v7
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+/* IMPORT CSS */
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
+@import url("https://clearvision.github.io/ClearVision-v7/betterdiscord.css");
+@import url('https://allpurposem.at/disblock/DisblockOrigin.theme.css');
+@import url(https://clearvision.github.io/Addons/whitney.css);
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css");
+
+
+
+
+/* SETTINGS */
+:root {
+
+  --display-badges: true;         /* Nitro and Booster badges on user profiles */
+  --display-hover-reaction-emoji: none;          /* Emoji suggestions on message hover */
+  --bool-super-reaction-hide-anim: false;          /* Replace Super Reactions with a blink animation */
+  --display-profile-effects: unset;
+  --display-active-now: none;
+
+      /*Server list fix */
+  --guildsize: 57;
+  --columns: 1;
+
+    /* TOPBAR TRANSPARENCY FIX */
+    .title_c38106  {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0px rgba(0,0,0,0);
+  }
+
+  /* ACCENT COLORS */
+  --main-color: #d30aca7d;
+  --hover-color: #1e63b3;
+  --success-color: #43b581;
+  --danger-color: #982929;
+  /* STATUS COLORS */
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --streaming-color: #593695;
+  --offline-color: #808080;
+  /* BACKGROUND IMAGES */
+  --background-image: url(https://i.vgy.me/cqMKsq.png);
+  --background-attachment: fixed;
+  --user-popout-image: var(--background-image);
+  --user-popout-attachment: var(--background-attachment);
+  --user-modal-image: var(--background-image);
+  --user-modal-attachment: var(--background-attachment);
+  /* HOME ICON */
+  --home-icon: url(https://clearvision.github.io/icons/discord.svg);
+  /* FONTS */
+  --main-font: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
+  /* BACKGROUND IMAGE FILTERS */
+  --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+  --user-popout-filter: var(--background-filter);
+  --user-modal-filter: var(--background-filter);
+}
+
+/* THEME SPECIFIC SHADING */
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(252, 252, 252, 0.3);
+  --background-shading-percent: 100%;
+  --card-shading: rgba(252, 252, 252, 0.3);
+  --popout-shading: rgba(252, 252, 252, 0.7);
+  --modal-shading: rgba(252, 252, 252, 0.5);
+  --input-shading: rgba(0, 0, 0, 0.3);
+  --normal-text: #36363c;
+  --muted-text: #75757e;
+}
+
+/* GREY THEME / DARK THEME IN OLD UI */
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.4);
+  --background-shading-percent: 50%;
+  --card-shading: rgba(0, 0, 0, 0.3);
+  --popout-shading: rgba(0, 0, 0, 0.6);
+  --modal-shading: rgba(0, 0, 0, 0.4);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #d8d8db;
+  --muted-text: #aeaeb4;
+}
+
+/* DARK THEME - NEW UI EXCLUSIVE */
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.73);
+  --background-shading-percent: 50%;
+  --card-shading: rgba(0, 0, 0, 0.4);
+  --popout-shading: rgba(0, 0, 0, 0.7);
+  --modal-shading: rgba(0, 0, 0, 0.5);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #fbfbfb;
+  --muted-text: #94949c;
+}
+
+/* MIDNIGHT THEME - NEW UI EXCLUSIVE */
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0.8);
+  --background-shading-percent: 100%;
+  --card-shading: rgba(0, 0, 0, 0.5);
+  --popout-shading: rgba(0, 0, 0, 0.8);
+  --modal-shading: rgba(0, 0, 0, 0.6);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #dcdcde;
+  --muted-text: #86868e;
+}
+
+/* ADD ADDITIONAL CSS BELOW HERE */

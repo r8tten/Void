@@ -1,0 +1,261 @@
+/**
+ * @name ClearVision V7 Meowko
+ * @author Naoko
+ * @version 7.0.0 pre
+ * @description Highly customizable theme for BetterDiscord.
+ * @source https://github.com/ClearVision/ClearVision-v7
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+/* IMPORT CSS */
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
+@import url("https://clearvision.github.io/ClearVision-v7/vencord.css");
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css");
+@import url("https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap");
+body {
+    /* top bar options */
+    --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+    --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: off; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+    /* window controls */
+    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
+    --window-control-size: 14px; /* size of custom window controls */
+}
+/* SETTINGS */
+:root {
+	/*Server list fix */
+  --guildsize: 57;
+  --columns: 1;
+  
+  /*Vencord setting addon card fix */
+  .vc-addon-card {
+  background: var(--background-overlay);
+  border: 2px solid var(--main-color);
+}
+.vc-addon-card:hover {
+  background: var(--background-overlay);
+  border: 2px solid var(--hover-color);
+}
+.vc-plugins-info-button svg:not(:hover, :focus) {
+  color: #fff;
+}
+.vc-settings-quickActions-pill {
+  background: var(--card-color);
+  color: var(--text-normal);
+  border: 1px solid var(--main-color);
+  transition: all 0.5s ease-in-out;
+}
+.vc-settings-quickActions-pill:hover {
+  background: var(--hover-color);
+  color: var(--text-normal);
+  border: rgba(0, 0, 0, 0);
+}
+  /* custom watermark */
+  .leading_c38106::before {
+  content: "Meowko";
+  position: static;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-normal);
+  order: 2;
+  filter: drop-shadow(0 0 5px var(--hsl-main-color));
+  
+
+}
+.leading_c38106::after {
+  content: ".exe";
+  position: static;
+  margin-top: 3px;
+  margin-left: 2px;
+  font-family: var(--code-font);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  order: 3;
+}
+
+  /* Direct Message Header Fix */
+  .visual-refresh .headerText__99e7c {
+  display : flex;
+  text-transform : uppercase;
+  font-size : 13px;
+  font-weight : 700;
+  align-items : center
+}
+  /* Direct Message size */
+  .linkButtonIcon__972a0,
+  .name__20a53 {
+  font-size: 14px;
+  transition: all 0.15s ease-in-out;
+  overflow: hidden;
+}
+
+  /* Server Members Editor */
+  .membersGroup_c8ffbb {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  font-size: 14.5px;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+  opacity: 0.7;
+}
+
+.name__91a9d {
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 0.6);
+  transition: all 0.15s ease-in-out;
+  overflow: hidden;
+}
+  
+    /*EMOJI BACKGROUND TRANSPARENCY */
+	.popoutContainer__0f481, .popoutContent_d5cd2d, .guildSection_d5cd2d {
+	background: rgba(0, 0, 0, 0.3) !important;
+	box-shadow: 0 0 0px rgba(0,0,0,0);
+}
+	
+	/* TOPBAR TRANSPARENCY FIX */
+	.title_c38106  {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0px rgba(0,0,0,0);
+	
+	
+}
+	/* Disables Activities Text Old text*** */
+	.headerContainer__095fe, .openOnHover__0f2e8.container__0f2e8 {
+	display: none;
+}
+
+	/* Discovery and Add Server */
+	.tutorialContainer__650eb, .scroller_ef3116 > .listItem__650eb {
+    display: none;
+}
+
+	/* Transparrent Messsagebox */
+	.channelTextArea_f75fb0, .stackedBars__74017, .channelAttachmentArea_b77158, .upload_aa605f {
+    background: none !important;
+}
+
+	/* Transparrent Folder Icon */
+	.folderIconWrapper__48112 {
+    background: none !important;
+}
+	/* Chatbox Padding */
+	.scrollerInner__36d07 {
+    padding-bottom: 1.5%;
+}
+
+	/* Server Icon Roundness */
+	.icon__6e9f8 {
+    border-radius: 50%;
+}
+     /* 👥 SERVER MEMBERS HEADER */
+	.membersGroup_c8ffbb.text-sm\/medium_cf4812, .containerDefault__29444 {
+	font-size: px;
+}
+
+	/* Server threads scaling */
+	.mainContent__29444 {
+	transform: scale();
+}
+  /* ACCENT COLORS */
+  --main-color: #858799; /* default value: #858799 */
+  --hover-color: #858799;
+  --success-color: #163b3b;
+  --danger-color: #982929;
+  --url-color: #2780e6;
+  --channel-hover: #858799;
+  
+  /* STATUS COLORS */
+  --online-color: #4CBB17;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --streamig-color: #593695;
+  --offline-color: #595959; /* default value: #808080 */
+  
+  /* BACKGROUND IMAGES */
+  --background-image: url(https://i.imgur.com/Jrwk0KX.jpeg);
+  --background-attachment: fixed;
+  --user-popout-image: var(--background-image);
+  --user-popout-attachment: var(--background-attachment);
+  --user-modal-image: var(--background-image);
+  --user-modal-attachment: var(--background-attachment);
+  
+  /* HOME ICON */
+  --home-icon: url(https://clearvision.github.io/icons/discord.svg);
+  
+  /* FONTS */
+  --main-font: "Merienda", Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif; /* default: Merienda */
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
+  
+  /* BACKGROUND IMAGE FILTERS */
+  --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+  --user-popout-filter: var(--background-filter);
+  --user-modal-filter: var(--background-filter);
+}
+
+  /* USER STATUS COLOR */
+	.text_c9d15c {
+	color: #FFFFFF;
+ }
+
+/* THEME SPECIFIC SHADING */
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(252, 252, 252, 0.3);
+  --background-shading-percent: 100%;
+  --card-shading: rgba(252, 252, 252, 0.3);
+  --popout-shading: rgba(252, 252, 252, 0.7);
+  --modal-shading: rgba(252, 252, 252, 0.5);
+  --input-shading: rgba(0, 0, 0, 0.3);
+  --normal-text: #36363c;
+  --muted-text: #75757e;
+}
+
+/* GREY THEME / DARK THEME IN OLD UI */
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.4);
+  --background-shading-percent: 100%;
+  --card-shading: rgba(0, 0, 0, 0.3);
+  --popout-shading: rgba(0, 0, 0, 0.6);
+  --modal-shading: rgba(0, 0, 0, 0.4);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #d8d8db;
+  --muted-text: #aeaeb4;
+}
+
+/* DARK THEME - NEW UI EXCLUSIVE */
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.6);
+  --background-shading-percent: 100%;
+  --card-shading: rgba(0, 0, 0, 0.4);
+  --popout-shading: rgba(0, 0, 0, 0.7);
+  --modal-shading: rgba(0, 0, 0, 0.5);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #fbfbfb;
+  --muted-text: #94949c;
+}
+
+/* MIDNIGHT THEME - NEW UI EXCLUSIVE */
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0.7);
+  --background-shading-percent: 50%;
+  --card-shading: rgba(0, 0, 0, 0.5);
+  --popout-shading: rgba(0, 0, 0, 0.8);
+  --modal-shading: rgba(0, 0, 0, 0.6);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #dcdddeff;
+  --muted-text: #72767dff;
+}
+
+/* ADD ADDITIONAL CSS BELOW HERE */
+// @import url(https://davart154.github.io/Themes/Snippets/Old%20Chat%20Bar%20Layout/OldChatBar.css);
+
+
+
+
+

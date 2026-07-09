@@ -1,0 +1,180 @@
+/**
+ * @name Chillax
+ * @author Chillax Squad
+ * @authorLink https://github.com/warrayquipsome/Chillax#Authors
+ * @version 1.5.3
+ * @invite DrfX6286kF
+ * @description The theme where calm meets customization.
+ * @source https://github.com/warrayquipsome/Chillax
+*/
+
+/* CHILLAX theme entry point */
+@import url("https://warrayquipsome.github.io/Chillax/chillax.css");
+
+/* removable addons */
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css");
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css");
+@import url("https://nyri4.github.io/Discolored/main.css");
+@import url("https://warrayquipsome.github.io/Chillax/Addons/IconPackEdited.css");
+/*@import url("https://warrayquipsome.github.io/Chillax/Addons/AvatarOnlyMemberList.css");*/
+/*@import url("https://warrayquipsome.github.io/Chillax/Addons/FolderRedesign.css");*/
+/*@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");*/
+/*@import url("https://warrayquipsome.github.io/Chillax/Addons/FriendGrid.css");*/
+
+/*additional addons*/ /*(remove the both * to use)*/
+/*@import url("https://warrayquipsome.github.io/Chillax/Addons/SimpleLessLag.css");*/
+
+
+/*Chillax Roots*/
+:root {
+    /*background image*/ /*(replace the link to use)*/
+    --background-image: var(--wallpaper);
+    --bg-opacity: 100%;
+    /*bg dev suggestions*/
+    --wallpaper: url("https://i.imgur.com/yg3ztwU.jpeg");
+    /*modern background selection*/
+    --modern-dark-bg: url("https://warrayquipsome.github.io/Chillax/Wallpapers/modern-dark-bg.png");
+    --modern-light-bg: url("https://warrayquipsome.github.io/Chillax/Wallpapers/modern-light-bg.png");
+}
+
+
+/*window*/ /*dark mode*/
+:root.theme-dark {
+    --window-margin: 20px; /*must be above 20px*/
+    --window-colour: #0009;
+    --window-blur: 3px;
+    --window-border-radius: 10px;
+    --sidebar-colour: rgb(36, 36, 36);
+}
+
+/*window*/ /*light mode*/
+:root.theme-light {
+    --window-margin: 0px; /*must be above 20px*/
+    --window-colour: rgba(255, 255, 255, 0.6);
+    --window-blur: 5px;
+    --window-border-radius: 10px;
+    --sidebar-colour: rgb(209, 209, 209);
+}
+
+
+/*roots*/ /*both dark and light*/
+:root {
+    --user-name: "Naoko";
+    --edited-message: " EDITED ✎ ";
+    --font-name: Merienda;
+    --font-size: 15px;
+    --group-chat-font: "Monoton"; /* change this to change the group chat's default font */
+
+    /* For accent color to take full effect must need to change both */
+    /* chillax colours rgb */
+    --accentcolor: 255, 111, 140;
+    /* chillax colours hex */
+    --accentcolorV2: #fb5454;
+
+
+    /* settings modal root */
+    --themelightsettingsmodalbackground: rgb(223, 223, 223);
+    --themedarksettingsmodalbackground: rgb(51, 49, 53);
+    --settingsmodalwidth: 960px;
+    --settingsmodalheight: 80vh;
+
+    /* avatar only member list */
+    --memberlist-border-radius: 25px; /* can be in `px`, `rem`, `em` */
+
+    /* placeholder texts/values */
+    /* input fields */
+    --chillax-input-field: "Life is so much easier when you just take a moment to chill";
+    /* input fields  when the channel is locked*/
+    --chillax-input-field-locked: "Life is so much easier when you just take a moment to chill";
+    /* typing indicator: when a single person is typing */
+    --chillax-input-typing-indicator-one-person: "is typing some shit";
+    /* typing indicator: when more than one person is typing */
+    --chillax-input-typing-indicator-many-person: "multiple people are talking shit";
+
+    /* scroller (by default transparent) */
+    --chillax-scroller-color: transparent; /* change `transparent` to some other hex color to make it visible */
+}
+
+/*discord transparency*//*roots*/ /*theme dark*/
+.theme-dark {
+    --background-message-hover: rgba(255, 255, 255, 0.055);
+    --header-primary: #fff;
+    --header-secondary: #b9bbbe;
+    --text-normal: #dcddde;
+    --text-muted: #9d9d9d;
+    --channels-default: #8e9297;
+    --interactive-normal: #b9bbbe;
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: #4f545c;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-tertiary: transparent;
+    --background-accent: rgb(36, 36, 36);
+    --activity-card-background: transparent;
+    --deprecated-panel-background: transparent;
+}
+
+/*discord transparency*//*roots*/ /*theme light*/
+.theme-light {
+    --background-message-hover: rgba(255, 255, 255, 0.055);
+    --header-primary: rgb(0, 0, 0);
+    --header-secondary: #3f3f3f;
+    --text-normal: #303030;
+    --text-muted: #333333;
+    --channels-default: #585b5e;
+    --interactive-normal: #3a3a3a;
+    --interactive-hover: #333333;
+    --interactive-active: rgb(0, 0, 0);
+    --interactive-muted: #4f545c;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-tertiary: transparent;
+    --background-accent: rgb(27, 27, 27);
+    --activity-card-background: transparent;
+    --deprecated-panel-background: transparent;
+}
+
+/*!*friends grid banner colour*!*/
+/*.theme-dark {*/
+/*    --FG-cards-banner-background: transparent !important;*/
+/*}*/
+
+/*.theme-light {*/
+/*    --FG-cards-banner-background: transparent !important;*/
+/*}*/
+
+.sidebar_a4d4d9 .name_d8bfb3 {
+    font-size: 16px !important; /* Adjust the size as needed */
+
+}
+
+.overflow_a82120 {
+    font-size: 16px; /* Adjust this value as needed */
+}
+
+
+/* Change font size in the message input box */
+.fontSize16Padding_bdf0de, 
+.editor_a552a6 {
+    font-size: 16px !important; /* Adjust the size as needed */
+    line-height: 1.5 !important; /* Optional: Adjust line spacing */
+}
+
+/* Apply the border to the window */
+:root {
+    --window-border-color: rgba(255, 255, 255, 0.355); /* Light border for dark mode */
+    --window-border-width: 0px; /* Adjust the width of the border */
+}
+
+:root.theme-light {
+    --window-border-color: rgba(0, 0, 0, 0.2); /* Dark border for light mode */
+}
+
+#app-mount {
+    border: var(--window-border-width) solid var(--window-border-color) !important;
+    border-radius: var(--window-border-radius, 10px) !important; /* Optional rounded corners */
+    box-sizing: border-box; /* Ensure padding and border don't affect layout */
+    overflow: hidden; /* Prevent content from spilling out of the border */
+}
+

@@ -1,0 +1,29 @@
+{
+    "plugins": {},
+    "customCspRules": {
+        "fonts.cdnfonts.com": [
+            "connect-src",
+            "img-src",
+            "style-src",
+            "font-src"
+        ],
+        "discord-mica.pages.dev": [
+            "connect-src",
+            "img-src",
+            "style-src",
+            "font-src"
+        ],
+        "images.all-free-download.com": [
+            "connect-src",
+            "img-src",
+            "style-src",
+            "font-src"
+        ],
+        "fontlibrary.org": [
+            "connect-src",
+            "img-src",
+            "style-src",
+            "font-src"
+        ]
+    }
+}

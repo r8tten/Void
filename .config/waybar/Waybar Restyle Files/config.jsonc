@@ -1,0 +1,166 @@
+{
+  "reload_config_on_change": false,
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "height": 29,
+  "margin-top": 0,
+  "margin-left": 25,
+  "margin-right": 25,
+  "spacing": 10,
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+
+  "modules-left": [
+    "custom/omarchy",
+    "custom/separator",
+    "custom/weather",
+    "custom/clock",
+    "pulseaudio#output",
+    "mpris",
+  ],
+
+  "modules-center": ["hyprland/workspaces"],
+
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "idle_inhibitor",
+    "custom/separator",
+    "tray",
+    "custom/notification-silencing-indicator",
+  ],
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 60,
+    "exec": "wttrbar --location 'Ripley, Derbyshire' --nerd",
+    "return-type": "json",
+  },
+
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌗",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "omarchy-launch-wifi",
+  },
+
+  "custom/clock": {
+    "exec": "date +'%A %H:%M%p' | sed 's/AM/am/;s/PM/pm/'",
+    "interval": 1,
+    "tooltip": false,
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
+  },
+
+  "pulseaudio#output": {
+    "format": "{icon} {volume}%",
+    "tooltip-format": "{icon} {volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "default": ["", "", " "],
+    },
+    "max-volume": 100,
+    "scroll-step": 2,
+    "smooth-scrolling-threshold": 1,
+    "on-click": "omarchy-launch-audio",
+    "on-click-right": "pamixer -t",
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "cursor": true,
+    "format": "{name}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 6,
+    },
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10,
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "tooltip-format-activated": "Stay Awake: ON 󱎴 ",
+    "tooltip-format-deactivated": "Stay Awake: OFF 󰶐 ",
+    "format-icons": {
+      "activated": "󱎴",
+      "deactivated": "󰷛",
+    },
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": {
+      "warning": 50,
+      "critical": 80,
+    },
+  },
+
+  "memory": {
+    "interval": 1,
+    "format": " {used:0.1f}G/{total:0.1f}G",
+    "tooltip-format": "Used {percentage}%\n{used:0.1f}GB/{total:0.1f}GB",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": {
+      "warning": 50,
+      "critical": 80,
+    },
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false,
+  },
+
+  "bluetooth": {
+    "format": " {num_connections}",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "omarchy-launch-bluetooth",
+  },
+
+  "custom/notification-silencing-indicator": {
+    "on-click": "omarchy-toggle-notification-silencing",
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/notification-silencing.sh",
+    "signal": 10,
+    "return-type": "json",
+  },
+
+  "custom/omarchy": {
+    "format": "⏻",
+    "on-click": "omarchy-menu system",
+    "on-click-right": "xdg-terminal-exec",
+    "tooltip-format": "Omarchy System menu\n\nSuper + Alt + Space",
+  },
+
+  "mpris": {
+    "format": " {dynamic}",
+    "format-paused": "󰝛 {dynamic}",
+    "interval": 1,
+    "dynamic-order": ["artist"], //"dynamic-order": ["artist", "title"],
+    "dynamic-separator": " - ",
+    "max-length": 40,
+    "tooltip-format": "{player} ({status}):\n{artist} - {title}",
+    "status-icons": {
+      "paused": "󰝛",
+    },
+    "ignored-players": ["firefox"],
+  },
+}
