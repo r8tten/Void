@@ -151,6 +151,7 @@ window#waybar.empty #mpris {
 #custom-voxtype.recording,
 #custom-weather,
 #custom-clock,
+#custom-razer-battery,
 #custom-updatespacman,
 #custom-idle-indicator.active,
 #custom-idle-indicator,
@@ -178,6 +179,18 @@ window#waybar.empty #mpris {
     margin: 3px 3px;
     border-radius: 15px;
     transition: all 0.25s ease;
+}
+
+#network,
+#network.disconnected,
+#network.wifi,
+#network.ethernet {
+    padding: 0 2px;
+}
+
+
+#pulseaudio.input {
+    padding: 0 2px;
 }
 
 #custom-clock {
@@ -251,6 +264,10 @@ window#waybar.empty #mpris {
 }
 #power-profiles-daemon.power-saver {
     color: #25e712;
+}
+
+#custom-razer-battery {
+    padding: 0 1px;
 }
 
 /* Tooltips & Separators */
