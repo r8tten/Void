@@ -43,6 +43,7 @@
     "custom/separator3",
     "network",
     "pulseaudio#input",
+    "custom/razer-battery",
     "custom/separator",
     "custom/weather",
     "custom/clock",
@@ -151,13 +152,21 @@
     },
   },
 
+  "custom/razer-battery": {
+      "exec": "~/.config/waybar/scripts/razer-battery.sh",
+      "return-type": "json",
+      "interval": 60,
+  },
+
   // default exec for clock = date +'%H:%M %p' | tr '[:upper:]' '[:lower:]'
   "custom/clock": {
-    "exec": "date +'%a %H:%M %p' | sed 's/AM/am/;s/PM/pm/'",
+    "exec": "printf '{\"text\":\"%s\",\"tooltip\":\"%s\"}\n' \"$(date +'%a %H:%M %p' | sed 's/AM/am/;s/PM/pm/')\" \"$(date +'%A, %d %B %Y')\"",
+    "return-type": "json",
     "interval": 60,
-    "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
+    "tooltip": true,
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
+
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
